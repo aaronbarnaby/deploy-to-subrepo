@@ -2,7 +2,7 @@ FROM alpine
 
 RUN apk update && \
     apk upgrade && \
-    apk add git rsync
+    apk add git
 
 ADD entrypoint.sh /entrypoint.sh
 
