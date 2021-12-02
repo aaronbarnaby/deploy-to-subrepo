@@ -1,0 +1,38 @@
+name: 'Copy file/folder to another repository'
+description: 'Used for pushing a copy of a file/folder to another repository'
+inputs:
+  source:
+    description: 'Source file from the origin directory'
+    required: true
+  target_repo:
+    description: 'Destination repository'
+    required: true
+  target_folder:
+    description: 'Directory to push the file to'
+    required: false
+  commit_email:
+    description: 'Email for the git commit'
+    required: false
+  commit_name:
+    description: 'GitHub username for the commit'
+    required: false
+  target_branch:
+    description: 'branch to push file to, defaults to main'
+    required: false
+  commit_message:
+    description: 'A custom message for the commit'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.source }}
+    - ${{ inputs.target_repo }}
+    - ${{ inputs.target_folder }}
+    - ${{ inputs.commit_email }}
+    - ${{ inputs.commit_name }}
+    - ${{ inputs.target_branch }}
+    - ${{ inputs.commit_message }}
+branding:
+  icon: 'git-commit'
+  color: 'green'
