@@ -1,4 +1,4 @@
-name: 'Copy file/folder to another repository'
+name: 'Deploy to SubRepo'
 description: 'Used for pushing a copy of a file/folder to another repository'
 inputs:
   source:
