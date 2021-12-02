@@ -15,7 +15,7 @@ This GitHub Action was built to handle copying files/folders from the current re
           uses: actions/checkout@v2
 
         - name: Pushes test file
-          uses: aaronbarnaby/deploy-to-subrepo@v1.0.0
+          uses: aaronbarnaby/deploy-to-subrepo@v1.0.1
           env:
             API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
           with:
