@@ -36,7 +36,7 @@ CLONE_DIR=$(mktemp -d)
 echo "Cloning Target Git Repo"
 git config --global user.email "$INPUT_COMMIT_EMAIL"
 git config --global user.name "$INPUT_COMMIT_NAME"
-git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-token:$API_TOKEN@github.com/$INPUT_TARGET_REPO.git" "$CLONE_DIR"
+git clone --single-branch --branch $INPUT_TARGET_BRANCH "https://x-access-token:$API_TOKEN@github.com/$INPUT_TARGET_REPO.git" "$CLONE_DIR"
 
 DEST_COPY="$CLONE_DIR/$INPUT_TARGET_FOLDER"
 
